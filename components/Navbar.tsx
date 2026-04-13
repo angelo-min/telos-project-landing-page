@@ -38,7 +38,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Link href="/" className="text-2xl font-heading font-semibold tracking-tight z-50">
-            Artesa.
+            Telos Project.
           </Link>
 
           {/* Desktop Nav */}

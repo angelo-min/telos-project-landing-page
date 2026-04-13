@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import Link from "next/link";
 
-const whatsappUrl =
-  "https://wa.me/390000000000?text=Ciao%2C%20ho%20appena%20visto%20i%20vostri%20lavori%20%E2%80%94%20sono%20interessato%20a%20un%20sito%20per%20il%20mio%20locale.";
+const message = "Ciao, ho un ristorante e vorrei vedere come verrebbe il sito. Il mio locale si chiama...";
+const whatsappUrl = `https://wa.me/390000000000?text=${encodeURIComponent(message)}`;
 
 export default function Contact() {
   return (
@@ -32,10 +32,10 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="text-4xl md:text-5xl lg:text-6xl font-heading font-medium tracking-tight mb-6 leading-[1.08]"
+          className="text-4xl md:text-5xl lg:text-6xl font-heading font-medium tracking-tight mb-6 leading-[1.08] text-white"
         >
-          Il passo successivo è{" "}
-          <span className="italic text-primary">semplice.</span>
+          Vuoi vedere come apparirebbe{" "}
+          <span className="italic text-primary">il tuo ristorante?</span>
         </motion.h2>
 
         <motion.p
@@ -43,10 +43,9 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-surface/65 text-lg md:text-xl mb-14 max-w-xl leading-relaxed"
+          className="text-lg md:text-xl text-surface/70 mb-12 max-w-2xl mx-auto leading-relaxed"
         >
-          Rispondici su WhatsApp. Bastano due righe: il nome del tuo locale e
-          quando possiamo parlare. Pensiamo a tutto noi.
+          Mandaci il nome del tuo locale su WhatsApp. Ti facciamo vedere un&apos;anteprima gratuita in 48 ore.
         </motion.p>
 
         <motion.div

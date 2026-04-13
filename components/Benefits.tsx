@@ -5,23 +5,23 @@ import { Clock, ChefHat, MapPin, Wrench } from "lucide-react";
 
 const benefits = [
   {
-    title: "Pronti in 48 ore",
-    description: "Non settimane. Non mesi. Il tuo sito è online in due giorni lavorativi.",
+    title: "Basta telefonate per il menu",
+    description: "I tuoi clienti vedono menu, orari e prezzi dal telefono. Non devono più chiamarti per chiedere.",
     icon: Clock,
   },
   {
-    title: "Pensato per la ristorazione",
-    description: "Non siamo generalisti. Facciamo solo siti per chi fa da mangiare.",
+    title: "Prenotazioni senza commissioni",
+    description: "Il cliente ti scrive su WhatsApp. Niente TheFork, niente commissioni a coperto, niente sconti obbligati.",
     icon: ChefHat,
   },
   {
-    title: "Bello e facile da trovare",
-    description: "Design professionale e ottimizzazione per posizionarti su Google e Maps.",
+    title: "Ti trovano su Google",
+    description: "Quando qualcuno cerca dove mangiare nella tua zona, il tuo ristorante esce con menu, foto e bottone per chiamare.",
     icon: MapPin,
   },
   {
-    title: "Tu pensi alla cucina, noi al resto",
-    description: "Hosting, aggiornamenti, modifiche e manutenzione. Ci pensiamo noi.",
+    title: "QR code per i tavoli",
+    description: "Ti diamo un QR code da stampare. Il cliente lo inquadra e vede il menu dal telefono. Sempre aggiornato.",
     icon: Wrench,
   },
 ];

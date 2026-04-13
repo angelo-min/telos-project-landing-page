@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="text-3xl font-heading font-semibold tracking-tight text-white mb-4 block">
-              Artesa.
+              Telos Project.
             </Link>
             <p className="text-surface/60 max-w-sm mt-4 text-sm leading-relaxed">
               Realizziamo siti web artigianali per ristoranti, pizzerie e trattorie in Campania. 
@@ -67,7 +67,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-surface/40 text-xs">
-            © 2026 Artesa. Siti web per la ristorazione campana.
+            © 2026 Telos Project. Siti web per la ristorazione campana.
           </p>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse"></div>
