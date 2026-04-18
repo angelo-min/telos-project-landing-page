@@ -8,12 +8,11 @@ import { cn } from "@/lib/utils";
 const plans = [
   {
     name: "Base",
-    monthlyPrice: "29",
-    setupPrice: "149",
+    monthlyPrice: "35",
+    setupPrice: "150",
     features: [
-      "Sito web con menu digitale",
-      "QR code per i tavoli",
-      "Bottone WhatsApp per prenotare",
+      "Sito vetrina",
+      "QR code",
       "Aggiornamenti menu entro 48h"
     ],
     recommended: false,
@@ -21,29 +20,27 @@ const plans = [
   },
   {
     name: "Consigliato",
-    monthlyPrice: "49",
-    setupPrice: "99",
+    monthlyPrice: "90",
+    setupPrice: "100",
     features: [
       "Tutto del piano Base, più:",
-      "Ottimizzazione Google Business Profile",
-      "Aggiornamenti menu illimitati entro 24h",
-      "Foto del locale ottimizzate"
+      "Prenotazioni online",
+      "Aggiornamenti menu illimitati entro 24h"
     ],
     recommended: true,
     ctaText: "Scegli Consigliato",
   },
   {
-    name: "Completo",
-    monthlyPrice: "89",
-    setupPrice: "gratuito",
+    name: "Custom",
+    monthlyPrice: "su richiesta",
+    setupPrice: "su richiesta",
     features: [
-      "Tutto del piano Consigliato, più:",
-      "Gestione scheda Google (risposte a recensioni)",
-      "Report mensile visite e click",
-      "Modifiche prioritarie entro 12h"
+      "Soluzioni personalizzate",
+      "In base alle tue esigenze",
+      "Contattaci per una consulenza gratuita"
     ],
     recommended: false,
-    ctaText: "Scegli Completo",
+    ctaText: "Richiedi quotazione",
   }
 ];
 
@@ -85,16 +82,28 @@ export default function Pricing() {
               <div className="mb-6 text-center">
                 <h3 className="text-2xl font-heading font-medium mb-4">{plan.name}</h3>
                 <div className="flex items-end justify-center mb-2">
-                  <span className="text-5xl lg:text-6xl font-heading font-medium tracking-tight text-foreground">
-                    {plan.monthlyPrice}€
-                  </span>
-                  <span className="text-sm ml-1.5 mb-2 font-medium tracking-wide text-muted">
-                    /mese
-                  </span>
+                  {plan.monthlyPrice === "su richiesta" ? (
+                    <span className="text-2xl font-heading font-medium text-primary">
+                      Prezzo su richiesta
+                    </span>
+                  ) : (
+                    <>
+                      <span className="text-5xl lg:text-6xl font-heading font-medium tracking-tight text-foreground">
+                        {plan.monthlyPrice}€
+                      </span>
+                      <span className="text-sm ml-1.5 mb-2 font-medium tracking-wide text-muted">
+                        /mese
+                      </span>
+                    </>
+                  )}
                 </div>
                 {plan.setupPrice === "gratuito" ? (
                   <div className="text-sm font-medium text-emerald-600 bg-emerald-50 inline-block px-3 py-1 rounded-full">
                     Setup gratuito
+                  </div>
+                ) : plan.setupPrice === "su richiesta" ? (
+                  <div className="text-sm font-medium text-muted">
+                    Setup su richiesta
                   </div>
                 ) : (
                   <div className="text-sm font-medium text-muted">
