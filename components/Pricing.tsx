@@ -79,7 +79,7 @@ export default function Pricing() {
                 </div>
               )}
 
-              <div className="mb-6 text-center">
+              <div className="mb-6 text-center min-h-[140px] flex flex-col justify-center">
                 <h3 className="text-2xl font-heading font-medium mb-4">{plan.name}</h3>
                 <div className="flex items-end justify-center mb-2">
                   {plan.monthlyPrice === "su richiesta" ? (
